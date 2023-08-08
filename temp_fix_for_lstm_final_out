@@ -1,6 +1,0 @@
-# Decode the hidden state of the last time step
-        last_lstm_states = list()
-        for index_of_batch, length in enumerate(lengths):
-            index_of_last_lstm_output = length - 1
-            last_lstm_states.append(out.squeeze(1)[index_of_batch][index_of_last_lstm_output])
-        out = torch.stack(last_lstm_states)
